@@ -14,7 +14,7 @@ int main(int argc, const char** argv)
 			std::cout << "ERROR: Number too large";
 			return 0;
 		}
-		if (std::strtod(argv[2], NULL) < std::numeric_limits<double>::min() || c < std::numeric_limits<double>::min())
+		if (std::strtod(argv[2], NULL) < std::numeric_limits<double>::lowest() || c < std::numeric_limits<double>::lowest())
 		{
 			std::cout << "ERROR: Number too small";
 			return 0;
@@ -29,7 +29,7 @@ int main(int argc, const char** argv)
 			std::cout << "ERROR: Number too large";
 			return 0;
 		}
-		if (strtod(argv[2], NULL) < std::numeric_limits<double>::min() || f < std::numeric_limits<double>::min())
+		if (strtod(argv[2], NULL) < std::numeric_limits<double>::lowest() || f < std::numeric_limits<double>::lowest())
 		{
 			std::cout << "ERROR: Number too small";
 			return 0;
