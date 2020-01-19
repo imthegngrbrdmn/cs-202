@@ -9,12 +9,17 @@ int main(int argc, const char** argv)
 	{
 		double c=cpp_ftoc(argv[2]);
 		std::cout << std::strtod(argv[2], NULL) << " degrees Farenheit is " << c << " degrees Celsius.\n";
-	}
-	if (argc > 2 && argv[1] == std::string("--ctof"))
+	} 
+	else if (argc > 2 && argv[1] == std::string("--ctof"))
 	{
 		double f = c_ctof(argv[2]);
 		std::cout << strtod(argv[2], NULL) << " degrees Celsius is " << f << " degrees Farenheit.\n";
 	}
+	else
+	{
+		std::cout << "ERROR: Invalid function call.\n";
+	}
+
 	return 0;
 }
 double cpp_ftoc(const char* str)
