@@ -7,14 +7,21 @@ double c_ctof(const char* str);
 int main(int argc, const char** argv)
 {
 	//Handle large & small exceptions
-	if (std::strtod(argv[2], NULL) > std::numeric_limits<double>::max())
+	if (strtod(argv[2], NULL) > std::numeric_limits<double>::max())
 	{
-		std::cout << "ERROR: Number too large";
+		std::cout << "ERROR: Number too large\n";
 		return 0;
 	}
-	if (std::strtod(argv[2], NULL) < std::numeric_limits<double>::lowest())
+	if (strtod(argv[2], NULL) < std::numeric_limits<double>::lowest())
 	{
-		std::cout << "ERROR: Number too small";
+		std::cout << "ERROR: Number too small\n";
+		return 0;
+	}
+
+	//Handle non-numerical input
+	if (strtod(argv[2], NULL) == 0 && argv[2] != std::string("0"))
+	{
+		std::cout << "ERROR: Non-numerical input\n";
 		return 0;
 	}
 
