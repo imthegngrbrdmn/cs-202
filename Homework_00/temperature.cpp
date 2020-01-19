@@ -5,26 +5,25 @@ double c_ctof(const char* str);
 
 int main(int argc, const char** argv)
 {
-	char* pEnd;
 	if (argc > 2 && argv[1] == std::string("--ftoc"))
 	{
-		cpp_ftoc(argv[3]);
+		double c=cpp_ftoc(argv[2]);
+		std::cout << std::strtod(argv[2], NULL) << " degrees Farenheit is " << c << " degrees Celsius.\n";
 	}
 	if (argc > 2 && argv[1] == std::string("--ctof"))
 	{
 		double f = c_ctof(argv[2]);
-		std::cout << strtod(argv[2],&pEnd) << " degrees Celsius is " << f << " degrees Farenheit.\n";
+		std::cout << strtod(argv[2], NULL) << " degrees Celsius is " << f << " degrees Farenheit.\n";
 	}
 	return 0;
 }
 double cpp_ftoc(const char* str)
 {
-	std::cout << "ftoc";
-	return 0;
+	double f=std::strtod(str, NULL);
+	return (f-32)*5/9;
 }
 double c_ctof(const char* str)
 {
-	char* pEnd;
-	double c=strtod(str, &pEnd);
+	double c=strtod(str, NULL);
 	return (c * 9 / 5) + 32;
 }
