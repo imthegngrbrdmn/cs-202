@@ -1,5 +1,5 @@
 #include <iostream>
-int gutenberg()
+int main()
 {
 	std::cout << "The host is riding from Knocknarea,"
 		<< "\nAnd over the grave of Clooth - na - bare;"
