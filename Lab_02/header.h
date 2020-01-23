@@ -16,6 +16,7 @@ public:
 	virtual ~Jumpsuit();
 	void setColor(int color);
 	void setOwner(std::string name);
+	std::string properties
 };
 
 #endif
