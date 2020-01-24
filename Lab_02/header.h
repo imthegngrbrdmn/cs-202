@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <sstream>
 
 class Jumpsuit
 {
@@ -16,7 +18,7 @@ public:
 	virtual ~Jumpsuit();
 	void setColor(int color);
 	void setOwner(std::string name);
-	std::string properties
+	std::string properties();
 };
 
 #endif

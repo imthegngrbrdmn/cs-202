@@ -22,6 +22,12 @@ void Jumpsuit::setColor(int color)
 {
 	j_color = color;
 }
+std::string Jumpsuit::properties()
+{
+	std::stringstream ss;
+	ss << "Owner is " << owner << "\nColor is %X" << j_color;
+	return ss.str();
+}
 Jumpsuit::~Jumpsuit()
 {
 	delete &owner;
