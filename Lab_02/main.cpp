@@ -1,5 +1,5 @@
 #include "header.h"
-int main(int* argc, char** argv)
+int main(int argc, char** argv)
 {
 	std::vector<Jumpsuit> suits;
 	for (int i = 0; i < 5; i++)
@@ -10,5 +10,6 @@ int main(int* argc, char** argv)
 	{
 		std::cout << suit.properties() << std::endl;
 	}
+	Jumpsuit green = Jumpsuit(0x00FF00);
 	return 0;
 }

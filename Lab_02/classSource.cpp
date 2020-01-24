@@ -3,6 +3,7 @@
 Jumpsuit::Jumpsuit()
 {
 	setColor(0xFF6600);
+	setOwner("Default");
 }
 Jumpsuit::Jumpsuit(int color)
 {
@@ -25,10 +26,10 @@ void Jumpsuit::setColor(int color)
 std::string Jumpsuit::properties()
 {
 	std::stringstream ss;
-	ss << "Owner is " << owner << "\nColor is %X" << j_color;
+	ss << "Owner is " << owner << "\nColor is 0x" << std::hex << j_color;
 	return ss.str();
 }
 Jumpsuit::~Jumpsuit()
 {
-	delete &owner;
+	
 }
