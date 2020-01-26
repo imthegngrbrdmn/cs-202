@@ -2,7 +2,7 @@
 StopWatch::StopWatch()
 {
 	start();
-	endTime = time(&endTime);
+	endTime=std::chrono::system_clock::now();
 }
 StopWatch::~StopWatch()
 {
@@ -10,9 +10,10 @@ StopWatch::~StopWatch()
 }
 void StopWatch::start()
 {
-	time(&startTime);
+	startTime=std::chrono::system_clock::now();
 }
 double StopWatch::stop()
 {
-	time(&endTime);
+	endTime=std::chrono::system_clock::now();
+	return std::chrono::duration_cast<std::chrono::milliseconds>(endTime-startTime).count()/100.0;
 }
