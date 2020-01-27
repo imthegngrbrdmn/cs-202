@@ -30,4 +30,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="alice.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="cities.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="eyre.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="ion.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="pride.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="raven.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

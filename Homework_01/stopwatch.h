@@ -8,6 +8,8 @@
 #include <algorithm>
 #include <random>
 #include <fstream>
+#include <functional>
+#include <list>
 
 class StopWatch
 {

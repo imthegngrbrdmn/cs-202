@@ -130,6 +130,14 @@
   <ItemGroup>
     <ClInclude Include="stopwatch.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="alice.txt" />
+    <Text Include="cities.txt" />
+    <Text Include="eyre.txt" />
+    <Text Include="ion.txt" />
+    <Text Include="pride.txt" />
+    <Text Include="raven.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
