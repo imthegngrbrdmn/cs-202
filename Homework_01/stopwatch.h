@@ -6,6 +6,7 @@
 #include <ctime>
 #include <vector>
 #include <algorithm>
+#include <random>
 
 class StopWatch
 {
