@@ -22,4 +22,5 @@ int main (int argc, char** argv)
 	watch.start();
 	std::binary_search(nums.begin(), nums.end(), needle[0]);
 	std::cout << "It took " << watch.stop() << " seconds for binary search." << std::endl;
+	return 0;
 }
