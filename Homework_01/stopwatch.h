@@ -10,6 +10,7 @@
 #include <fstream>
 #include <functional>
 #include <list>
+#include <forward_list>
 
 class StopWatch
 {

@@ -7,6 +7,7 @@ int main(int argc, char** argv)
 	std::fstream book;
 	std::vector<std::string> vectWords;
 	std::list<std::string> listWords;
+	std::forward_list<std::string> fWords;
 	std::string randWord;
 	for(std::string title:titles)
 	{
@@ -40,6 +41,20 @@ int main(int argc, char** argv)
 		listWords.clear();
 		book.close();
 		std::cout << "\n";
+		book.open(title.c_str());
+		while (book >> word)
+		{
+			fWords.push_front(word);
+		}
+		watch.start();
+		fWords.sort();
+		std::cout << "It took " << watch.stop() << " seconds to sort the forward_list book." << std::endl;
+		watch.start();
+		std::find(fWords.begin(), fWords.end(), randWord);
+		std::cout << "It took " << watch.stop() << " seconds to find " << randWord << " in the forward_list book." << std::endl;
+		fWords.clear();
+		book.close();
+		std::cout << "-------------------------------------------------------------------------------------------\n";
 
 	}
 }
