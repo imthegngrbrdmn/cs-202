@@ -20,6 +20,7 @@ public:
 	void setOwner(std::string name);
 	void getOwner(std::string& name);
 	std::string properties();
+	std::unique_ptr<Jumpsuit> suitMaker(const std::string name, const int color);
 };
 
 #endif

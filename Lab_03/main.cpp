@@ -8,5 +8,6 @@ int main(int argc, char** argv)
 	std::cout << "Made unique_ptr<Jumpsuit> five pointing to a Jumpsuit: " << five << std::endl;
 	std::unique_ptr<Jumpsuit> newFive = std::move(five);
 	std::cout << "Made unique_ptr<Jumpsuit> newFive which moved five: " << newFive << std::endl;
+
 	delete jumpPtr;
 }
