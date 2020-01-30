@@ -30,13 +30,8 @@ void Jumpsuit::setColor(int color)
 std::string Jumpsuit::properties()
 {
 	std::stringstream ss;
-	ss << "Owner is " << owner << "\nColor is 0x" << std::hex << j_color << std::endl;
+	ss << "\nOwner is " << owner << "\nColor is 0x" << std::hex << j_color << std::endl;
 	return ss.str();
 }
 Jumpsuit::~Jumpsuit()
 {}
-std::unique_ptr<Jumpsuit> Jumpsuit::suitMaker(std::unique_ptr<Jumpsuit> pointy)
-{
-	Jumpsuit j = Jumpsuit(*pointy);
-	return std::unique_ptr<Jumpsuit>(&j);
-}
