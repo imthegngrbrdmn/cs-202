@@ -124,6 +124,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="vector3f.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\catch.hpp" />
+    <ClInclude Include="vector3f.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
