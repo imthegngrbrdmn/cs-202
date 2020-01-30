@@ -34,4 +34,6 @@ std::string Jumpsuit::properties()
 	return ss.str();
 }
 Jumpsuit::~Jumpsuit()
-{}
+{
+	std::cout << "deleted "<<j_color<<std::endl;
+}
