@@ -35,10 +35,8 @@ std::string Jumpsuit::properties()
 }
 Jumpsuit::~Jumpsuit()
 {}
-std::unique_ptr<Jumpsuit> Jumpsuit::suitMaker(const std::string name, const int color)
+std::unique_ptr<Jumpsuit> Jumpsuit::suitMaker(std::unique_ptr<Jumpsuit> pointy)
 {
-	Jumpsuit j = Jumpsuit();
-	j.setColor(color);
-	j.setOwner(name);
+	Jumpsuit j = Jumpsuit(*pointy);
 	return std::unique_ptr<Jumpsuit>(&j);
 }
