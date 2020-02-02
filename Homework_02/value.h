@@ -6,7 +6,6 @@
 struct Value
 {
 	int integer;
-	double longnumber;
 	std::string text;
 	char character;
 };
