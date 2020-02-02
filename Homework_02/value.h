@@ -1,11 +1,13 @@
 #ifndef VALUE_H
 #define VALUE_H
 
+#include <string>
+
 struct Value
 {
 	int integer;
 	double longnumber;
-	string text;
+	std::string text;
 	char character;
 };
 
