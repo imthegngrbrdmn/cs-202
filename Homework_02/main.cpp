@@ -4,9 +4,8 @@
 #include"../catch.hpp"
 #include<iostream>
 
-Value queue(Value val)
+Value queue(std::list<Value> values, Value val)
 {
-	std::list<Value> values{ {5,"Five",'V'},{1,"One",'I'},{10,"Ten",'X'} };
 	values.push_back(val);
 	Value retVal = values.back();
 	values.pop_back();
@@ -14,7 +13,10 @@ Value queue(Value val)
 }
 TEST_CASE("Queue is run", "[queue]")
 {
-	REQUIRE(queue({ 42,"TEST",'T' }) == Value({ 42, "TEST", 'T' }));
-	REQUIRE(queue({ 0,"123",'\n' }) == Value({ 0, "123", '\n' }));
-	REQUIRE(queue({ -7,"^%$@",'%' }) == Value({ -7, "^%$@", '%' }));
+	std::list<Value> values{ {5,"Five",'V'},{1,"One",'I'},{10,"Ten",'X'} };
+
+	REQUIRE(queue(values,{ 42,"TEST",'T' }) == Value({ 42, "TEST", 'T' }));
+	REQUIRE(queue(values,{ 0,"123",'\n' }) == Value({ 0, "123", '\n' }));
+	REQUIRE(queue(values,{ -7,"^%$@",'%' }) == Value({ -7, "^%$@", '%' }));
 }
+
