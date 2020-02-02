@@ -12,3 +12,9 @@ Value queue(Value val)
 	values.pop_back();
 	return retVal;
 }
+TEST_CASE("Queue is run", "[queue]")
+{
+	REQUIRE(queue({ 42,"TEST",'T' }).character == 'T');
+	REQUIRE(queue({ 42,"TEST",'T' }).text == "TEST");
+	REQUIRE(queue({ 42,"TEST",'T' }).integer == 42);
+}
