@@ -14,7 +14,7 @@ Value queue(Value val)
 }
 TEST_CASE("Queue is run", "[queue]")
 {
-	REQUIRE(queue({ 42,"TEST",'T' }).character == 'T');
-	REQUIRE(queue({ 42,"TEST",'T' }).text == "TEST");
-	REQUIRE(queue({ 42,"TEST",'T' }).integer == 42);
+	REQUIRE(queue({ 42,"TEST",'T' }) == Value({ 42, "TEST", 'T' }));
+	REQUIRE(queue({ 0,"123",'\n' }) == Value({ 0, "123", '\n' }));
+	REQUIRE(queue({ -7,"^%$@",'%' }) == Value({ -7, "^%$@", '%' }));
 }
