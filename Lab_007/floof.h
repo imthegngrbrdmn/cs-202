@@ -11,6 +11,7 @@ public:
 	void setName(std::string newName);
 	int getFloofiness() const;
 	const std::string& getName() const;
+	Floof& operator=(Floof& other);
 private:
 	int floofiness{ 100 };
 	std::string name{ "Floof" };
