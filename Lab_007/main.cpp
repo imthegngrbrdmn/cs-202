@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	floof2.setName("Flooficorn");
 	std::cout << floof2 << std::endl;
 	Floof floof3;
-	floof3 = floof2;
+	//floof3 = floof2;
 	std::cout << floof3 << std::endl;
 	return 0;
 }
