@@ -18,3 +18,13 @@ TEST_CASE("Factorial are computed through recursion", "[factorial]")
 	REQUIRE(factorial(5) == 120);
 	REQUIRE(factorial(9) == 362880);
 }
+
+TEST_CASE("Fibonacci sequence numbers are computed through a loop", "[fib_loop}")
+{
+	REQUIRE(fib_loop(0) == 0);
+	REQUIRE(fib_loop(1) == 1);
+	REQUIRE(fib_loop(2) == 1);
+	REQUIRE(fib_loop(3) == 2);
+	REQUIRE(fib_loop(7) == 13);
+	REQUIRE(fib_loop(30) == 832040);
+}
