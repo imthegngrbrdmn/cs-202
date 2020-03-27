@@ -28,3 +28,13 @@ TEST_CASE("Fibonacci sequence numbers are computed through a loop", "[fib_loop}"
 	REQUIRE(fib_loop(7) == 13);
 	REQUIRE(fib_loop(30) == 832040);
 }
+
+TEST_CASE("Fibonacci sequence numbers are computed through recurstion", "[fib]")
+{
+	REQUIRE(fib(0) == 0);
+	REQUIRE(fib(1) == 1);
+	REQUIRE(fib(2) == 1);
+	REQUIRE(fib(3) == 2);
+	REQUIRE(fib(7) == 13);
+	REQUIRE(fib(30) == 832040);
+}
