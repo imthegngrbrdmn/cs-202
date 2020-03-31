@@ -1,6 +1,6 @@
 #include "ackermann.h"
 
-int main(int argc, char** argv)
+int ack(int m, int n)
 {
 	return 0;
 }
