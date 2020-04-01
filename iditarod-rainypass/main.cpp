@@ -4,7 +4,13 @@
 
 int main(int argc, char** argv)
 {
-	std::cout << "ack(1, 1)\t"<<ack(1,1)<<std::endl;
-	std::cout << "ack(3, 5)\t"<<ack(3,5)<<std::endl;
+	int m = 3, n = 1;
+	StopWatch watch;
+	double time;
+	int result;
+	watch.start();
+	result = ack(m, n);
+	time = watch.stop();
+	std::cout << "ack("<<m<<","<<n<<"):\t" << result << "\nTook:\t" << time << " seconds";
 	return 0;
 }
