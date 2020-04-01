@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv)
 {
-	int m = 3, n = 1;
+	int m = 3, n = 9;	//m<4	n<10
 	StopWatch watch;
 	double time;
 	int result;
