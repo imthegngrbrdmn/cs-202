@@ -15,7 +15,7 @@ int main(int argc, char** argv)
 			watch.start();
 			result = ack(m, n);
 			time = watch.stop();
-			std::cout << "ack(" << m << "," << n << "):\t" << result << "\nTook:\t" << time << " seconds\n\n";
+			std::cout << "ack(" << m << "," << n << "):\t" << result << "\nTook:\t\t" << time << " seconds\n\n";
 		}
 	}
 	return 0;
