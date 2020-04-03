@@ -20,7 +20,7 @@ public:
 	{
 		std::cout << __FUNCTION__ << " destroyed\n";
 	}
-	void printClassName()
+	static void printClassName()
 	{
 		std::cout << className_ << std::endl;
 	}
