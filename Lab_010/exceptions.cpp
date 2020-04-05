@@ -1,13 +1,29 @@
 #include <iostream>
 
+class Thing
+{
+public:
+    Thing()
+    {
+        "Thing is created\n";
+    }
+    ~Thing()
+    {
+        "Thing is destroyed\n";
+    }
+
+private:
+
+};
+
 void functionC()
 {
-    //your code here
+    throw std::runtime_error("functionC() threw std::runtime error");
 }
 
 void functionB()
 {
-    //your code here
+    Thing t;
     std::cout << "Starting functionB()\n";
     functionC();
     std::cout << "Ending functionB()\n";
@@ -15,11 +31,16 @@ void functionB()
 
 void functionA()
 {
-    // your code here
-    functionB();
-    // your code here
-    std::cout << "Caught an exception: " << e.what() << std::endl;
-    // your code here
+    try 
+    {
+        functionB();
+        std::cout << "HELP! SOMETHING IS WRONG!\nYOU READ ME!!\n";
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << "Caught an exception: " << e.what() << std::endl;
+    }
+    std::cout << "You should be reading me.\n";
 }
 
 int main()
