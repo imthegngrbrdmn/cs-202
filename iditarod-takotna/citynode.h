@@ -8,7 +8,11 @@ public:
 	~CityNode();
 
 private:
-
+	unsigned int number_;
+	double latitude_;
+	double longitude_;
+	double graphx_;
+	double graphy_;
 };
 
 CityNode::CityNode()
