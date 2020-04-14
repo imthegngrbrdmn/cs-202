@@ -35,5 +35,8 @@
     <ClInclude Include="citynode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="citylist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

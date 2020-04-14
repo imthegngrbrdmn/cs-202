@@ -145,6 +145,7 @@
     <None Include="vm1084.tsp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="citylist.h" />
     <ClInclude Include="citynode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
