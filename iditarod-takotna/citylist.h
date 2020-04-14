@@ -3,13 +3,15 @@
 
 #include "citynode.h"
 #include <vector>
+#include <string>
+
 class CityList
 {
 public:
-	CityList();
-	CityList~();
-
+	CityList()	{}
+	~CityList() {}
+	void addCities(std::string tspfile);
 private:
-	std::vector<CityNode> citynodes;
+	std::vector<CityNode> nodes;
 };
 #endif

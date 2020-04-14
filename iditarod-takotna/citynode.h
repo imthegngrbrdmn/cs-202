@@ -1,11 +1,12 @@
 #ifndef CITYNODE_H
 #define CITYNODE_H
+#include <string>
 
 class CityNode
 {
 
 public:
-	CityNode() {}
+	CityNode(std::string information);
 	~CityNode()	{}
 	unsigned int number()	{ return number_; }
 	double latitude()		{ return latitude_; }
