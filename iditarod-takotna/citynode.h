@@ -6,7 +6,7 @@ class CityNode
 {
 
 public:
-	CityNode(std::string information);
+	CityNode(std::string& information);
 	~CityNode()	{}
 	unsigned int number()	{ return number_; }
 	double latitude()		{ return latitude_; }
