@@ -42,4 +42,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="pla85900.tsp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="pr1002.tsp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="rl1889.tsp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="usa13509.tsp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="vm1084.tsp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

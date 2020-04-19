@@ -149,6 +149,13 @@
     <ClInclude Include="citypath.h" />
     <ClInclude Include="tspsolver.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="pla85900.tsp" />
+    <None Include="pr1002.tsp" />
+    <None Include="rl1889.tsp" />
+    <None Include="usa13509.tsp" />
+    <None Include="vm1084.tsp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
