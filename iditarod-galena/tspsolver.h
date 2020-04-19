@@ -10,6 +10,7 @@ class TspSolver
 public:
 	CityPath SolveRandomly(CityList& cities, int m);
 	CityPath SolveGreedy(CityList& cities);
+	//CityPath SolveMyWay
 private:
 	CityPath path_;
 };

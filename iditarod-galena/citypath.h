@@ -1,7 +1,8 @@
 #ifndef CITYPATH_H
 #define CITYPATH_H
 #include "citylist.h"
-
+#include <vector>
+#include <iostream>
 class CityPath
 {
 public:
@@ -16,12 +17,13 @@ public:
 		{
 			return -7;
 		}
-		for (int i = 0; i < path_.size(); i++)
+		for (int i = 0; i < path_.size()-1; i++)
 		{
-			distance += cities.distance(i, i + 1);
+			distance += cities.distance(path_[i], path_[i + 1]);
 		}
 		return distance;
 	}
+	int front()				{ return path_.front(); }
 private:
 	std::vector<int> path_;
 };

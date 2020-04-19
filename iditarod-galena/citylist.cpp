@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 
-void CityList::addCities(std::string tspfile)
+bool CityList::addCities(std::string tspfile)
 {
     std::string line;
     std::ifstream tsp(tspfile);
@@ -33,6 +33,11 @@ void CityList::addCities(std::string tspfile)
         }
         tsp.close();
     }
+    if (nodes.size() <= 0)
+    {
+        return false;
+    }
+    return true;
 }
 
 double CityList::distance(int first, int second)

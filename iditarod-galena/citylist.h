@@ -11,9 +11,9 @@ class CityList
 public:
 	CityList()	{}
 	~CityList() {}
-	void addCities(std::string tspfile);
+	bool addCities(std::string tspfile);
 	double distance(int first, int second);
-	int numCities() { return nodes.size(); }
+	double numCities() { return (double)nodes.size(); }
 private:
 	std::vector<CityNode> nodes;
 };
