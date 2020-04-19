@@ -7,7 +7,7 @@
 
 int main(int argc, char** argv)
 {
-	std::vector<std::string> TspFiles = { /*"pla85900.tsp",*/ "pr1002.tsp", /*"rl1889.tsp", "usa13509.tsp",*/ "vm1084.tsp"};
+	std::vector<std::string> TspFiles = { "pla85900.tsp", "pr1002.tsp", "rl1889.tsp", "usa13509.tsp", "vm1084.tsp"};
 	TspSolver solver;
 	for (std::string file : TspFiles)
 	{
@@ -23,6 +23,12 @@ int main(int argc, char** argv)
 		std::cout << "\nSolving Greedy\n";
 		CityPath gpath = solver.SolveGreedy(cities);
 		for (int node : gpath.path())
+		{
+			std::cout << node << ", ";
+		}
+		std::cout << "\nSolving My Way\n";
+		CityPath mpath = solver.SolveMyWay(cities);
+		for (int node : mpath.path())
 		{
 			std::cout << node << ", ";
 		}
