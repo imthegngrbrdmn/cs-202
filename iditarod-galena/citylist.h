@@ -13,6 +13,7 @@ public:
 	~CityList() {}
 	void addCities(std::string tspfile);
 	double distance(int first, int second);
+	int numCities() { return nodes.size(); }
 private:
 	std::vector<CityNode> nodes;
 };

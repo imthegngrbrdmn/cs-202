@@ -24,6 +24,9 @@
     <ClCompile Include="citylist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tspsolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="citypath.h">
