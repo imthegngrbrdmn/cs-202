@@ -3,6 +3,7 @@
 #include <random>
 #include <chrono>
 #include <iostream>
+#include <list>
 
 using Random = effolkronium::random_static;
 
@@ -14,7 +15,7 @@ CityPath TspSolver::SolveRandomly(CityList& cities, int times)
 	for (int m = 0; m < times; m++)
 	{
 		std::vector<int> randomlist = {};
-		for (double i = 0; i < cities.numCities(); i++)
+		for (int i = 0; i < cities.numCities(); i++)
 		{
 			randomlist.push_back(i);
 		}
@@ -71,5 +72,33 @@ CityPath TspSolver::SolveGreedy(CityList& cities)
 		usedNodes.push_back(node);
 	}
 	path.addToPath(start);
+	return path;
+}
+
+CityPath TspSolver::SolveMyWay(CityList& cities)
+{
+	CityPath path;
+	std::list<int> randomlist;
+	for (double i = 1; i <= cities.numCities(); i++)
+	{
+		randomlist.push_back(i);
+	}
+	bool even = true;
+	while (randomlist.size() > 0)
+	{
+		
+		if (even)
+		{
+			path.addToPath(randomlist.front());
+			randomlist.pop_front();
+			even = false;
+		}
+		else
+		{
+			path.addToPath(randomlist.back());
+			randomlist.pop_back();
+			even = true;
+		}
+	}
 	return path;
 }
